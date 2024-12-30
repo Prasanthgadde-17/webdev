@@ -1,0 +1,207 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Main container to display the product */
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5%; /* This will create the gap between the image and the details */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image section */
+.image-gallery {
+  width: 45%; /* Image section will occupy 40% of the page */
+  margin-top: 30px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 80vh; /* Adjust the height of the image */
+  background-image: cover;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+/* Product details section */
+.product-details {
+  width: 45%; /* Product details will occupy 45% of the page */
+  margin-top: 80px;
+  padding-left: 30px; /* Space between the image and details */
+}
+
+/* Price and delivery info styling */
+.price {
+  margin-top: 30px;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.delivery-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: smaller;
+  color: #555;
+}
+
+.delivery-info span {
+  display: flex;
+  flex-wrap: wrap;
+  color: #777;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Size selector and button styling */
+.size-selector {
+  margin-top: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.size-selector label {
+  font-weight: bold;
+  color: #333;
+}
+
+.size-selector select {
+  padding: 5px 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.size-selector select:focus {
+  border-color: #007bff;
+  background-color: #e7f1ff;
+}
+
+.size-selector select option {
+  padding: 5px;
+}
+.button-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+/* Button Styling */
+button {
+  width: 50%; /* Makes the button width 50% of the parent container */
+  font-size: 18px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Description section */
+.description p {
+  color: #333;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Stack the image and product details vertically */
+  .product-container {
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap between the image and details */
+  }
+  .image-gallery {
+    width: 100%;
+    justify-content: center;
+    align-items: center; /* Make the image take the full width on smaller screens */
+    margin-top: 0; /* Remove top margin */
+  }
+
+  .image-gallery img {
+    margin-right: 5%;
+
+    max-height: 55vh;
+    align-items: center;
+    margin-left: 0px;
+    object-fit: contain; /* Preserve aspect ratio and ensure it doesn't get cropped */
+  }
+
+  /* Adjust image section width */
+
+  .product-details {
+    width: 100%; /* Take full width on smaller screens */
+    margin-top: 20px;
+    padding-left: 0; /* Remove left padding */
+  }
+
+  .price {
+    font-size: 24px;
+  }
+
+  /* Size selector and button adjustments */
+  .size-selector {
+    flex-direction: column;
+    gap: 15px; /* Increase gap for better readability */
+  }
+
+  .size-selector select {
+    width: 40%; /* Make the select box take full width */
+  }
+  .button-container {
+    justify-content: center; /* Ensure button is centered */
+    width: 100%; /* Make button container take full width */
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    font-size: 18px;
+  }
+
+  /* Adjust product description */
+  .description p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Additional responsiveness for smaller devices */
+@media (max-width: 480px) {
+  .price {
+    font-size: 22px; /* Reduce font size further for small screens */
+  }
+
+  button {
+    font-size: 16px; /* Reduce button text size */
+  }
+
+  .size-selector select {
+    padding: 8px 20px; /* Increase padding for better touch interaction */
+  }
+}
+
